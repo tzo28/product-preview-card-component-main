@@ -1,0 +1,113 @@
+:root {
+	--Dark-cyan: hsl(158, 36%, 37%);
+	--Cream: hsl(30, 38%, 92%);
+	--Very-dark-blue: hsl(212, 21%, 14%);
+	--Dark-grayish-blue: hsl(228, 12%, 48%);
+	--White: hsl(0, 0%, 100%);
+	--ff-accent: "Fraunces", san-serif;
+	font-size: 14px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img,
+svg {
+	display: block;
+	max-width: 100%;
+}
+body {
+	height: 100vh;
+	background-color: var(--Cream);
+	font-family: "Montserrat", sans-serif;
+	display: flex;
+	font-weight: 400;
+	justify-content: center;
+	color: var(--Dark-grayish-blue);
+	align-items: center;
+}
+h2 {
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 0.2rem;
+}
+h1 {
+	color: var(--Very-dark-blue);
+	font-size: 2rem;
+	font-family: var(--ff-accent);
+	font-weight: 700;
+	word-wrap: break-word;
+	max-width: 10ch;
+}
+.container {
+	margin: 2rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	background-color: var(--White);
+	border-radius: 0.5rem;
+	max-width: 600px;
+}
+.image-area {
+	border-radius: 1rem 0 0 1rem;
+	overflow: hidden;
+}
+.text-area {
+	padding: 1.4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.text-area p {
+	max-width: 26ch;
+	line-height: 1.7;
+}
+.prices {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+}
+.current {
+	font-weight: 700;
+	color: var(--Dark-cyan);
+	font-family: var(--ff-accent);
+	font-size: 2rem;
+}
+.normal {
+	text-decoration: line-through;
+}
+.btn {
+	font: inherit;
+	outline: none;
+	border: none;
+	color: var(--White);
+	font-weight: 700;
+	background-color: var(--Dark-cyan);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	transition: 200ms;
+}
+.btn:hover {
+	background-color: hsl(157, 44%, 17%);
+}
+@media (max-width: 376px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+	.image-area {
+		border-radius: 1rem 1rem 0 0;
+	}
+	.text-area {
+		gap: 0.4rem;
+	}
+	h1 {
+		max-width: 20ch;
+	}
+}
